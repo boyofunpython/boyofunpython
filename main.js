@@ -37,7 +37,7 @@ async function codeExcute(script) {
     canvas.height = 500;
     setCanvas(canvas.transferControlToOffscreen());
     try {
-        const { results, error, stdout } = await asyncRun(script, {}, 30);
+        const { results, error, stdout } = await asyncRun(script, {}, 60);
         let message = stdout !== undefined ? stdout : "";
         if (results !== undefined) {
             message += results;
